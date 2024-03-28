@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CamaleCase</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #inputArea {
+        height: 150px;
+        border: 2px solid silver;
+        border-radius: 10px;
+        /* padding: 10px; */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .w-full {
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        border: 0px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .clear {
+        background-color: red;
+    }
+
+    .convert {
+        background: green;
+    }
+
+    .copy {
+        background: black;
+        font-size: 10px;
+
+    }
+
+    .copy:hover {
+        background-color: gray;
+        transition-duration: 0.3s;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="w-full" id="outputContainer">
+            <h2 id="output"></h2>
+        </div>
+        <form action="" class="w-full">
+            <textarea onblur="camaleCase()" onchange="camaleCase()" onkeyup="camaleCase()" name="" id="inputArea"
+                placeholder="Enter your text"></textarea>
+        </form>
+        <div>
+            <button onclick="clearForm()" class="clear">Clear</button>
+            <button class="convert" onclick="camaleCase()">Convert</button>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
